@@ -36,7 +36,9 @@ if(isset($_POST["operacao"])){
   
     <header>
         <div class="logo">
+            <a href="index.php?action=home">
             <img src="img/spotify icon.png" alt="Ispotify" width="100px">
+            </a>
         </div>
         <nav>
             <ul>

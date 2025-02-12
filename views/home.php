@@ -20,12 +20,14 @@ $suasmusicas = $controller->listarMusicasPorUserId($_COOKIE['user_id']);
   
     <header>
         <div class="logo">
+            <a href="index.php?action=home">
             <img src="img/spotify icon.png" alt="Ispotify" width="100px">
+            </a>
         </div>
         <nav>
             <ul>
-            <li><a href="index.php?action=perfil">Página de perfil</a></li>
-            <li><a href="index.php?action=logout">LogOut</a></li>
+                <li><a href="index.php?action=perfil">Página de perfil</a></li>
+                <li><a href="index.php?action=logout">LogOut</a></li>
             </ul>    
         </nav>
     </header>
