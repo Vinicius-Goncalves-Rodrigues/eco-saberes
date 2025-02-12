@@ -13,14 +13,14 @@ class MusicController {
     public function listarMusicasPorUserId($id_user) {
         return $this->model->listarMusicasPorUserId($id_user);
     }
-    public function inserirmusica($nome, $duracao, $genero,$id_user) {
-        $this->model->inserirmusica($nome,$duracao, $genero, $id_user);
+    public function inserirmusica($nome, $texto, $assunto,$id_user) {
+        $this->model->inserirmusica($nome,$texto, $assunto, $id_user);
     }
     public function deletarMusica($id_musica) {
         $this->model->deletarMusica($id_musica);
     }
-    public function atualizarMusica($id_musica,$nome,$duracao, $genero) {
-        $this->model->atualizarMusica($id_musica,$nome,$duracao, $genero);
+    public function atualizarMusica($id_musica,$nome,$texto, $assunto) {
+        $this->model->atualizarMusica($id_musica,$nome,$texto, $assunto);
     }
 }
 ?>

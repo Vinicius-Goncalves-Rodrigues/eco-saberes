@@ -1,11 +1,11 @@
 <?php
 class MusicModel {
     private $pdo;
-    private $table_name = "musicas";
+    private $table_name = "artigos";
 
     public $id;
     public $nome;
-    public $duracao;
+    public $texto;
 
 
     public function __construct($pdo) {
@@ -13,12 +13,12 @@ class MusicModel {
     }
 
     // Método para criar uma musica
-    public function inserirmusica($nome, $duracao, $genero,$id_user)
+    public function inserirmusica($nome, $texto, $assunto,$id_user)
     {
 
-        $sql = "INSERT INTO " . $this->table_name .  " (nome, duracao, genero, id_user) VALUES (?, ?, ?, ?) ";
+        $sql = "INSERT INTO " . $this->table_name .  " (nome, texto, assunto, id_user) VALUES (?, ?, ?, ?) ";
         $stmt = $this->pdo->prepare($sql);
-        $stmt->execute([$nome, $duracao, $genero, $id_user]);
+        $stmt->execute([$nome, $texto, $assunto, $id_user]);
     }
     public function listarMusicas()
     {
@@ -41,7 +41,7 @@ class MusicModel {
         $stmt->execute([$id_musica]);
     }
 
-    public function atualizarMusica($id_musica,$nome,$duracao,$genero)
+    public function atualizarMusica($id_musica,$nome,$texto,$assunto)
     {
         if($nome != ""){
             $sql = "UPDATE " . $this->table_name . " SET nome = ? WHERE id_musica = ? ";
@@ -49,16 +49,16 @@ class MusicModel {
             $stmt->execute([$nome,$id_musica]);
         }
     
-        if($duracao != ""){
-            $sql = "UPDATE " . $this->table_name . " SET duracao = ? WHERE id_musica = ? ";
+        if($texto != ""){
+            $sql = "UPDATE " . $this->table_name . " SET texto = ? WHERE id_musica = ? ";
             $stmt = $this->pdo->prepare($sql);
-            $stmt->execute([$duracao,$id_musica]);
+            $stmt->execute([$texto,$id_musica]);
         }
         
-        if($genero != ""){
-            $sql = "UPDATE " . $this->table_name . " SET genero = ? WHERE id_musica = ? ";
+        if($assunto != ""){
+            $sql = "UPDATE " . $this->table_name . " SET assunto = ? WHERE id_musica = ? ";
             $stmt = $this->pdo->prepare($sql);
-            $stmt->execute([$genero,$id_musica]);
+            $stmt->execute([$assunto,$id_musica]);
         }
     }
 }

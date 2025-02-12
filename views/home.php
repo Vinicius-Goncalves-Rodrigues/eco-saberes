@@ -24,12 +24,8 @@ $suasmusicas = $controller->listarMusicasPorUserId($_COOKIE['user_id']);
         </div>
         <nav>
             <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Explorar</a></li>
-                <li><a href="#">Sua Biblioteca</a></li>
-                <li><a href="#">Premium</a></li>
-                <li><a href="index.php?action=perfil">Página de perfil</a></li>
-                <li><a href="index.php?action=logout">LogOut</a></li>
+            <li><a href="index.php?action=perfil">Página de perfil</a></li>
+            <li><a href="index.php?action=logout">LogOut</a></li>
             </ul>    
         </nav>
     </header>

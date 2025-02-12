@@ -9,7 +9,7 @@ $musicas = $controller->listarMusicasPorUserId($_COOKIE['user_id']);
 
 if(isset($_POST["operacao"])){
     if($_POST['operacao'] == 'criar'){
-        $controller->inserirmusica( $_POST["nome"], $_POST["duracao"], $_POST["genero"],$_COOKIE['user_id']);
+        $controller->inserirmusica( $_POST["nome"], $_POST["assunto"], $_POST["assunto"],$_COOKIE['user_id']);
         header("Location: #");
     }
     if($_POST["operacao"] == 'delete'){
@@ -18,7 +18,7 @@ if(isset($_POST["operacao"])){
     }
     if($_POST["operacao"] == 'atualizar'){
         
-        $controller->atualizarMusica($_POST['id_musica'],$_POST['nome'],$_POST["duracao"], $_POST["genero"]);
+        $controller->atualizarMusica($_POST['id_musica'],$_POST['nome'],$_POST["assunto"], $_POST["assunto"]);
         header("Location: #");
     }
 }
@@ -40,10 +40,6 @@ if(isset($_POST["operacao"])){
         </div>
         <nav>
             <ul>
-                <li><a href="index.php?action=home">Início</a></li>
-                <li><a href="#">Explorar</a></li>
-                <li><a href="#">Sua Biblioteca</a></li>
-                <li><a href="#">Premium</a></li>
                 <li><a href="index.php?action=perfil">Página de perfil</a></li>
                 <li><a href="index.php?action=logout">LogOut</a></li>
             </ul>    
@@ -54,8 +50,8 @@ if(isset($_POST["operacao"])){
             <h2>Criar Música</h2>
     <form method="POST">
       <input  name="nome" placeholder="nome da música">
-      <input  name="duracao" placeholder="duração da música">
-      <input  name="genero" placeholder="gênero da música">
+      <input  name="assunto" placeholder="duração da música">
+      <input  name="assunto" placeholder="gênero da música">
       <input name="operacao" type="hidden" value="criar">
       <button class="login-btn" type="submit">Criar Música</button>
     </form> 
@@ -82,8 +78,8 @@ if(isset($_POST["operacao"])){
             
         </select>
         <input name="nome" placeholder="nome da música">
-        <input name="duracao" placeholder="duração da música">
-        <input name="genero" placeholder="gênero da música">
+        <input name="assunto" placeholder="duração da música">
+        <input name="assunto" placeholder="gênero da música">
         <input name="operacao" type="hidden" value="atualizar">
         <button class="login-btn" type="submit">Atualizar musica</button>
 
