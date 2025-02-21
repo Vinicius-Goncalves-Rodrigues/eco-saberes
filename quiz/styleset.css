@@ -1,0 +1,8 @@
+body {
+    background-image: url('img/brazil.jpg'); /* Caminho da imagem */
+    background-size: cover; /* Ajusta a imagem para cobrir toda a tela */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição */
+}
+
+

@@ -3,35 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro - Spotify</title>
-    <link rel="stylesheet" href="style/style.css">
+    <title>Cadastro - ecp-saberes</title>
+    <link rel="stylesheet" href="style/estilo.css">
 </head>
 <body>
-    <div class="login-container">
-        <div class="login-box">
-            <h1 class="spotify-logo">Spotify</h1>
-            <h2>Cadastre sua conta</h2>
-            <div class="dd">
-            <button class="fb-login-btn">
-                <img src="img/google.png" alt="" width="20px" height="20px">
-                Continuar com o Google
-            </button>
-            <br><br>
-            <button class="fb-login-btn">
-                <img src="img/facebook (2).png" alt="" width="20px" height="20px">
-                Continuar com o Facebook
-            </button>
-            <br><br>
-            <button class="fb-login-btn">
-                <img src="img/apple.png" alt=""width="20px" height="20px">
-                Continuar com o Apple
-            </button>
-            <br><br>
-            <button class="fb-login-btn">Continuar com o Telefone</button>
-        </div>
-            <br>     <br>
+                <img src="img\image__1_-removebg-preview.png" alt="">
+                <br>
+                <h1>Informe seus dados </h1>
+                <h2>complete as informações para prosseguir para o site</h2>
             <div class="linha"></div>
-            <br><br>
+            <br><div class="linha"></div><br>
             <div class="login-container">
             <form action="index.php?action=register" method="post">
                 <input type="text" name="nome" placeholder="nome de usuario" required>
@@ -46,8 +27,6 @@
                 <p class="signup-text">ja tem uma conta? <a href="index.php?action=login">fazer login</a>.</p>
             </form>
             </div>
-            
-        </div>
-    </div>
+            <h3><img src="img\escudo.png" alt="">Ambiente 100% Seguro</h3>
 </body>
 </html>
