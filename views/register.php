@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro - eco-saberes</title>
+    <title>Cadastro - ecp-saberes</title>
     <link rel="stylesheet" href="style/estilo.css">
 </head>
 <body>
-                <img src="img\image__1_-removebg-preview.png" alt="">
+                <img class="i" src="img\image__1_-removebg-preview.png" alt="">
                 <br>
                 <h1>Informe seus dados </h1>
                 <h2>complete as informações para prosseguir para o site</h2>

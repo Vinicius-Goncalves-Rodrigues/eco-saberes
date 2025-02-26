@@ -15,6 +15,7 @@ class MusicModel {
     // Método para criar uma musica
     public function inserirmusica($nome, $texto, $assunto,$id_user)
     {
+
         $sql = "INSERT INTO " . $this->table_name .  " (nome, texto, assunto, id_user) VALUES (?, ?, ?, ?) ";
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute([$nome, $texto, $assunto, $id_user]);

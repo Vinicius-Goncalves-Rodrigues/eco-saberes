@@ -2,15 +2,27 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    color: white;
 }
 
-C
-body:has(.musicaslistar){
-    justify-content: flex-start;
+body{
+    background-color: #001036;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
 }
 footer{
     margin-top:auto;
+}
+img{
+    width: 15%;
+    height: 10%;
+}
+.i{
+    margin-top: 60px;
 }
 .login-container {
     display: flex;
@@ -59,7 +71,8 @@ h3{
     font-size: 1.1em;
 }
 h3 img{
-    width: 40px;
+    width: 55px;
+    height: 50px;
 }
 
 form {

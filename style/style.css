@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -13,6 +13,7 @@ body {
     background-color: #d9d9d9;
     color: #000000;
     overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
 }
 body:has(.musicaslistar){
     justify-content: flex-start;

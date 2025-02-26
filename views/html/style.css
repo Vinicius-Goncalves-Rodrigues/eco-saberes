@@ -1,0 +1,19 @@
+
+.noticia {
+    display: flex;
+    justify-content: center;
+    width: 800px;
+    margin:0 auto;
+    flex-direction: column;
+    }
+    p{
+        font-size: 20px;
+    }
+    .texto{
+        display: flex;
+        justify-content: center;
+        width: 800px;
+        margin:0 auto;
+        flex-direction: column;
+        color: rgb(38, 172, 161);
+    }
