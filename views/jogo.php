@@ -79,7 +79,7 @@ if (!$acabo_o_jogo) {
             $acertou = true;
         }
     }
-    $quizController->criarResultado($pontuacao_time_1);
+    $quizController->criarResultado($pontuacao_time_1, $_COOKIE['user_id']);
     header('Location: final.php');
     exit;
 }
