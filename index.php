@@ -52,6 +52,37 @@ switch ($action) {
         session_destroy();
         header("Location: index.php?action=login");
         break;
+
+        case 'iniciar_quiz':
+        if (isset($_COOKIE['user_id'])) {
+            include 'views/index.html';
+        } else {
+            header("Location: index.php?action=iniciar_quiz");
+        }
+        break;
+
+    case 'iniciar_jogo':
+        if (isset($_COOKIE['user_id'])) {
+            include 'views/jogo.php';
+        } else {
+            header("Location: index.php?action=iniciar_jogo");
+        }
+        break;
+
+    case 'resultado':
+        if (isset($_COOKIE['user_id'])) {
+            include 'views/final.php';
+        } else {
+            header("Location: index.php?action=resultado");
+        }
+        break;
+    case 'regitrar_pergunta':
+        if (isset($_COOKIE['user_id'])) {
+            include 'views/registrar_pergunta.php';
+        } else {
+            header("Location: index.php?action=regitrar_pergunta");
+        }
+        break;
     case 'perfil':
         if (isset($_COOKIE['user_id'])) {
             include 'views/perfil.php';
