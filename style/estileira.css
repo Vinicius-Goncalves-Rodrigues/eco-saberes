@@ -2,7 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
 }
 
 body {
@@ -15,48 +18,22 @@ body {
     color: #ffffff;
     overflow-x: hidden;
     width: 100%;
-    
 }
 body:has(.musicaslistar){
     justify-content: flex-start;
 }
-footer{
-    margin-top:auto;
-}
-.login-container {
+.quiz{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
-    border-top: 1px solid rgb(255, 255, 255);
-    padding: 20px;
 }
-.login-container form{
-    align-items: center;
+.quiz img{
+    margin-left:7px;
+    width: 49%;
+    height: 49%;
 }
-.login-container input{
-    width: 200%;
-    align-items: center;
-}
-
-.login-box {
-    width: 400px;
-    height: 500px;
-    padding: 60px;
-    background-color:#fff9f9;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(211, 179, 179, 0.5);
-    text-align: center;
-}
-
-a:has(.spotify-logo){
-    text-decoration: none !important;
-    text-decoration-color: transparent !important;
-}
-.spotify-logo {
-    font-size: 2.5em;
-    color: #04852a;
-    margin-bottom: 20px;
+footer{
+    margin-top:auto;
 }
 h2 {
     font-size: 1.2em;
@@ -72,94 +49,11 @@ h3 img{
     width: 40px;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-input {
-    background-color:#ebe0e0;
-    border: none;
-    border-radius: 5px;
-    padding: 15px;
-    margin-bottom: 15px;
-    color: #ffffff;
-    font-size: 16px;
-}
-select{
-    background-color:#e7e4e4;
-    border: none;
-    border-radius: 5px;
-    padding: 15px;
-    margin-bottom: 15px;
-    color: #fff;
-    font-size: 16px;
-}
-
-input::placeholder {
-    color: #f0f0f0;
-}
-
-.login-btn {
-    background-color: #005AF9;
-    border: none;
-    padding: 15px;
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-bottom: 20px;
-    transition: background-color 0.3s;
-    border-radius: 5px;
-    width: 300px;
-}
-
-.login-btn:hover {
-    background-color: #0e426d;
-}
-
 .divider {
     margin: 10px 0;
     color: #ffffff;
     font-size: 14px;
 }
-
-.fb-login-btn {
-    background-color:#e6e2e2;
-    width: 300px;
-    border: 2px 2px solid white;
-    border-radius: 30px;
-    padding: 10px;
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
-}
-
-.fb-login-btn:hover {
-    background-color: #334d84;
-}
-
-.signup-text {
-    font-size: 18px;
-    color: #ffffff;
-    margin-top: 1px;
-}
-
-.signup-text a {
-    color: #064b99;
-    text-decoration: none;
-}
-
-.signup-text a:hover {
-    text-decoration: underline;
-}
-
 .dd{
     display: flex;
     flex-direction: column;
@@ -173,12 +67,18 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    border-bottom: 8px solid #00ff08;
 }
 
 header .logo img {
-    width: 370px;
+    width: 40%;
+    height: 40%;
+    transition: 0.5s
 }
-
+.logo img:hover{
+    scale: 1.1;
+    transition: 0.5s
+}
 nav ul {
     display: flex;
     list-style: none;
@@ -191,7 +91,10 @@ nav ul li{
     gap:.5rem;
     width: 150px;
 }
-
+li:hover{
+    scale: 1.1;
+    transition: 1s;
+}
 nav ul li a {
     text-decoration: none;
     color: #ffffff;
@@ -199,6 +102,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
+    transition: 1s;
     color: #1b1b1a;
 }
 
@@ -218,16 +122,16 @@ nav ul li a:hover {
     text-align: center;
     font-weight: bold;
     width: 100%;  
-    height: 440px; 
+    height: 100%; 
     padding: 20px; 
-    font-size: 36px;
-    
-
+    font-size: 27px;
 }
 .petro{
-    text-decoration: overline;
-    color: #1a1b1a;
+    color: black;
+    margin-left: 30px;
     font-size: 46px;
+    text-decoration: underline 4px solid #ffc760;
+    transition: 0.5s;
 }
 .textor{
     text-decoration: none;
@@ -349,6 +253,13 @@ nav ul li a:hover {
     .rodape-div{
         padding: 60px 0px 40px 0px;
     }
+    .quiz img{
+        width: 100%;
+        margin-left: 0;
+    }
+    .quiz .f{
+        width: 0;
+    }
 }
 
 .container {
@@ -393,11 +304,8 @@ nav ul li a:hover {
 }
 
 .logo2 img {
-    max-width: 700px;
-    width: 450px;
-    height: 300px;
-    align-item;
-
+    width: 100%;
+    height: 100%;
 }
 
 .cinza{

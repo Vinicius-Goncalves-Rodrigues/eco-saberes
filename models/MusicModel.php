@@ -5,6 +5,7 @@ class MusicModel {
 
     public $id;
     public $nome;
+    public $assunto;
     public $texto;
 
 

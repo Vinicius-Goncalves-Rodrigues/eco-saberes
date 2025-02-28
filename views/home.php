@@ -18,35 +18,28 @@ $suasmusicas = $controller->listarMusicasPorUserId($_COOKIE['user_id']);
 </head>
 <body>
   
-    <header>
+<header>
         <div class="logo">
-            <img src="img\image__1_-removebg-preview (2).png" height="100" width="105px"alt="Ispotify" >
-            
             <a href="index.php?action=home">
+                <img src="img\image__1_-removebg-preview (2).png" alt="Ispotify" >
             </a>
-
         </div>
-        <h1>ㅤ ㅤ" sustentabilidade não é <br> uma escolha é uma necessidade para <br>ㅤ ㅤa sobrevivencia do planeta "</h1>
-
-
         <nav>
             <ul>
-
                 <li> <img src="img\avatar (1).png" alt="" height="38" width="38"><a href="index.php?action=perfil"><H2>Minha conta</H2></a></li>
                 <li> <img src="img\sair (1).png" alt="BOA TARDE DANADÃO" height="38" width="38"><a href="index.php?action=logout"><h2>LogOut</h2></a></li>
             </ul>    
         </nav>
     </header>
-    <hr class="hr"> 
-    <div>
-        <a href="quiz\indexquiz.php">
-        <img src="img\Gemini_Generated_Image_kmkbkakmkbkakmkb.jfif" alt=""  height="950" width="945px">
-        <img src="img\Gemini_Generated_Image_kmkbkakmkbkakmkb.jfif" alt=""  height="950" width="945px">
+    <div class="quiz">
+        <a href="index.php?action=iniciar_quiz">
+        <img src="img\Gemini_Generated_Image_kmkbkakmkbkakmkb.jfif" alt="" >
+        <img src="img\Gemini_Generated_Image_kmkbkakmkbkakmkb.jfif" class="f" alt="" >
         </a>
     </div>
 
     <div class="d">
-    <h1 class="petro"> ㅤㅤFatos Interessantes</h1>
+    <h1 class="petro">Fatos Interessantes</h1>
     <div class="nova-container-grid">
         <div class="nova-featured-box">
             <a href="views\html" class="textor"><h1>Aplicativos educacionais promovem sustentabilidade nas escolas</h1></a>
@@ -62,8 +55,8 @@ $suasmusicas = $controller->listarMusicasPorUserId($_COOKIE['user_id']);
 
 
 
-<div class="d">W
-        <h1 class="petro"> ㅤㅤArtigos em destaque</h1>
+<div class="d">
+        <h1 class="petro">Artigos em destaque</h1>
         <div class="container-grid">
             <div class="text-box"> <a href="views/trabalho em grupo/index76.html" class="textor"> <h3> projeto luz,camera conscientização incentiva a pratica sobre desenvolvimento sustentavel atraves de produção de videos</h3></a></div>
             <div class="text-box"> <a href="views/trabalho em grupo/noticia.html" class="textor"> <h3>projeto de educação ambiental promove leitura e sustentabilidade nas escolas municipais</h3> </a></div>
@@ -78,10 +71,29 @@ $suasmusicas = $controller->listarMusicasPorUserId($_COOKIE['user_id']);
         </div>
     </div>
 
+    <div class="d">
+        <h1 class="petro">Artigos dos usuarios</h1>
+        <div class="container-grid">
+        <?php
+        foreach($musicas as $musica){
+                echo '<div class= "text-box">';
+                echo '<a href="#" class="textor">';
+                echo "<h3>$musica[nome]</h3";
+                echo "<h5>$musica[assunto]</h5";
+                echo "<p>$musica[texto]</p>";
+                echo '</a>';
+                echo '</div>';
+            }
+        ?>
+
+            
+        </div>
+    </div>
+
     <div class="container2">
     <div class="container">
         <div class="left-section">
-            <h1>"Investir em h1ráticas sustentáveis <br>  é investir no futuro do planeta<br> e da humanidade."</h1>
+            <h1>"Investir em práticas sustentáveis <br>  é investir no futuro do planeta<br> e da humanidade."</h1>
         </div>
         <div class="right-section">
             <div class="cinza">

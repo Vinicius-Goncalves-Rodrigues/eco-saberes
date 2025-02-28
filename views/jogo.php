@@ -80,7 +80,7 @@ if (!$acabo_o_jogo) {
         }
     }
     $quizController->criarResultado($pontuacao_time_1, $_COOKIE['user_id']);
-    header('Location: final.php');
+    header('Location: index.php?action=final');
     exit;
 }
 ?>
@@ -90,7 +90,7 @@ if (!$acabo_o_jogo) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
-    <link rel="stylesheet" href="assets/css/jogo.css">
+    <link rel="stylesheet" href="jogo.css">
 </head>
 <body>
     <p class="time um">Sua pontuação: <?= htmlspecialchars($pontuacao_time_1) ?></p>
@@ -110,7 +110,6 @@ if (!$acabo_o_jogo) {
             <div><input type="radio" name="resposta_selecionada" value="C"> <h1>C)</h1> <?= htmlspecialchars($pergunta['opcao_3']) ?></div>
             <div><input type="radio" name="resposta_selecionada" value="D"> <h1>D)</h1> <?= htmlspecialchars($pergunta['opcao_4']) ?></div>
 
-            <input type="hidden" name="repassou" value="0">
             <input type="hidden" name="jogo_id" value="<?= htmlspecialchars($jogo_id) ?>">
             <input type="hidden" name="vez_do_time" value="<?= htmlspecialchars($vez_do_time) ?>">
             <input type="hidden" name="pergunta_anterior_id" value="<?= htmlspecialchars($perguntaId) ?>">

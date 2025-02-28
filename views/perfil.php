@@ -9,7 +9,7 @@ $musicas = $controller->listarMusicasPorUserId($_COOKIE['user_id']);
 
 if(isset($_POST["operacao"])){
     if($_POST['operacao'] == 'criar'){
-        $controller->inserirmusica( $_POST["nome"], $_POST["assunto"], $_POST["assunto"],$_COOKIE['user_id']);
+        $controller->inserirmusica( $_POST["nome"], $_POST["assunto"], $_POST["texto"],$_COOKIE['user_id']);
         header("Location: #");
     }
     if($_POST["operacao"] == 'delete'){
@@ -18,7 +18,7 @@ if(isset($_POST["operacao"])){
     }
     if($_POST["operacao"] == 'atualizar'){
         
-        $controller->atualizarMusica($_POST['id_musica'],$_POST['nome'],$_POST["assunto"], $_POST["assunto"]);
+        $controller->atualizarMusica($_POST['id_musica'],$_POST['nome'],$_POST["assunto"], $_POST["texto"]);
         header("Location: #");
     }
 }
@@ -36,10 +36,10 @@ if(isset($_POST["operacao"])){
   
 <header>
         <div class="logo">
-            <img src="img\image__1_-removebg-preview (2).png" alt="Ispotify" >
+            <a href="index.php?action=home">
+                <img src="img\image__1_-removebg-preview (2).png" alt="Ispotify" >
+            </a>
         </div>
-
-
         <nav>
             <ul>
                 <li> <img src="img\avatar (1).png" alt="" height="38" width="38"><a href="index.php?action=perfil"><H2>Minha conta</H2></a></li>
@@ -49,15 +49,15 @@ if(isset($_POST["operacao"])){
     </header>
     <div class="login-container">   
         <div class="login-box2">
-            <h2>Criar Artigo</h2>
+            <h1>Criar Artigo</h1>
     <form method="POST">
       <input  name="nome" placeholder="nome do artigo">
-      <input  name="duracao" placeholder="assunto">
-      <input  name="genero" placeholder="texto">
+      <input  name="assunto" placeholder="assunto">
+      <input  name="texto" placeholder="texto">
       <input name="operacao" type="hidden" value="criar">
       <button class="login-btn" type="submit">Criar artigo</button>
     </form> 
-    <h2>deletar Artigo</h2>
+    <h1>deletar Artigo</h1>
     <form method="POST">
         <select name="id_musica">
             <?php
@@ -70,7 +70,7 @@ if(isset($_POST["operacao"])){
         <button class="login-btn" type="submit">deletar artigo</button>
 
     </form>
-    <h2>Atualizar Artigo</h2>
+    <h1>Atualizar Artigo</h1>
     <form method="POST">
         <select name="id_musica">
             <?php
@@ -80,13 +80,37 @@ if(isset($_POST["operacao"])){
             
         </select>
         <input name="nome" placeholder="nome da música">
-        <input name="assunto" placeholder="duração da música">
-        <input name="assunto" placeholder="gênero da música">
+        <input name="assunto" placeholder="assunto">
+        <input name="texto" placeholder="texto">
         <input name="operacao" type="hidden" value="atualizar">
         <button class="login-btn" type="submit">Atualizar artigo</button>
 
     </form> 
 </div>
 </div>
+
+<div class="container2">
+    <div class="container">
+        <div class="left-section">
+            <h1>"Investir em práticas sustentáveis <br>  é investir no futuro do planeta<br> e da humanidade."</h1>
+        </div>
+        <div class="right-section">
+            <div class="cinza">
+                <h1>
+            <h2>Fale conosco</h2>
+            <p>Eco saberes S/A</p>
+            <p>CNPJ 12.345.678/0001-78</p>
+            <p>Rua da Alegria, nº 1000</p>
+            <p>Cidade Xique-Xique</p>
+            <p>CEP 12345-678</p>
+            <p>São Paulo - SP</p>
+        </h1>
+        </div>
+            <div class="logo2">
+                <img src="img\image.png" alt="Logo Eco Saberes" width="250" height="250">
+            </div>
+        </div>
+    </div>
+    </div>
 </body>
 </html>

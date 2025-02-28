@@ -59,6 +59,27 @@ switch ($action) {
             header("Location: index.php?action=perfil");
         }
         break;
+    case 'iniciar_quiz':
+        if (isset($_COOKIE['user_id'])) {
+            include 'views/index.html';
+        } else {
+            header("Location: index.php?action=iniciar_quiz");
+        }
+        break;
+    case 'iniciar_jogo':
+        if (isset($_COOKIE['user_id'])) {
+            include 'views/jogo.php';
+        } else {
+            header("Location: index.php?action=iniciar_jogo");
+        }
+        break;
+    case 'final':
+        if (isset($_COOKIE['user_id'])) {
+            include 'views/final.php';
+        } else {
+            header("Location: index.php?action=final");
+        }
+        break;
     default:
         header("Location: index.php?action=login");
         break;
